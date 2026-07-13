@@ -751,12 +751,16 @@ html.cursor-on .cursor, html.cursor-on .cursor-ring { opacity: 1; }
   translate: clamp(-64px, -5vw, -24px) 0; /* off-centre poster look — figure breaks the frame's left edge */
   filter: saturate(0.85) contrast(1.06) drop-shadow(0 24px 44px rgba(0, 0, 0, 0.5));
 }
+/* responsive art-direction wrappers must not add a layout box */
+.cs-photo picture { display: contents; }
 /* per-slide nudges: 01 & 07 read better tucked fully inside the frame,
-   04 (Maribor) & 05 (Celje) only break the edge slightly */
+   04 (Maribor) & 05 (Celje) only break the edge slightly,
+   06 (Újpest) sits further left on wide screens */
 .career-slide:nth-child(1) .cs-photo img,
 .career-slide:nth-child(7) .cs-photo img { translate: 0 0; }
 .career-slide:nth-child(4) .cs-photo img,
 .career-slide:nth-child(5) .cs-photo img { translate: clamp(-40px, -3vw, -16px) 0; }
+.career-slide:nth-child(6) .cs-photo img { translate: clamp(25px, -7vw, -44px) 0; }
 
 .cs-photo figcaption {
   position: absolute; top: 12%; right: 0; z-index: 2;
@@ -1087,6 +1091,12 @@ html.cursor-on .cursor, html.cursor-on .cursor-ring { opacity: 1; }
 .footer-base a:hover { color: var(--ink); }
 
 /* ═══════════════ RESPONSIVE ═══════════════ */
+@media (max-width: 1550px) {
+  /* the pointing figure drifts too far left as the viewport narrows and
+     disappears behind the main figure — keep him nearer the right edge */
+  .hl-2 { right: clamp(24px, 7vw, 130px); }
+}
+
 @media (max-width: 1400px) {
   /* tighter frame: keep every figure centred inside it, no edge-breaking */
   .career-slides .career-slide .cs-photo img { translate: 0 0; }

@@ -30,7 +30,10 @@ if (!prefersReduced && typeof window.Lenis !== "undefined" && hasGsap) {
   document.documentElement.classList.add("has-lenis");
 }
 
-/* anchor links */
+/* anchor links — closeMnav is reassigned by the mobile nav block below so the
+   overlay releases the scroll lock BEFORE we ask lenis to move (a stopped
+   lenis silently ignores scrollTo, which broke every tap in the mobile menu) */
+let closeMnav = () => {};
 document.querySelectorAll("[data-scroll]").forEach((link) => {
   link.addEventListener("click", (e) => {
     const id = link.getAttribute("href");
@@ -38,7 +41,8 @@ document.querySelectorAll("[data-scroll]").forEach((link) => {
     const target = document.querySelector(id);
     if (!target) return;
     e.preventDefault();
-    if (lenis) lenis.scrollTo(target, { offset: 0, duration: 1.4 });
+    closeMnav();
+    if (lenis) lenis.scrollTo(target, { offset: 0, duration: 1.4, force: true });
     else target.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth" });
   });
 });
@@ -102,9 +106,8 @@ if (burger && mnav) {
   };
   burger.addEventListener("click", () =>
     setMenu(!document.documentElement.classList.contains("mnav-open")));
-  /* any nav link press closes the menu before the smooth scroll takes over */
-  document.querySelectorAll("#mnav a, #nav a").forEach((a) =>
-    a.addEventListener("click", () => setMenu(false)));
+  /* the anchor handler above calls this before scrolling */
+  closeMnav = () => setMenu(false);
   window.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 }
 
