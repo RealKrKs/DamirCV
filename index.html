@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Damir Krznar · Head Coach</title>
+<meta name="description" content="Damir Krznar, Croatian football manager. Double winner with Dinamo Zagreb, Slovenian champion with Celje, and the only coach ever to knock José Mourinho out of the Europa League." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306090f'/%3E%3Ctext x='32' y='44' font-family='Arial Black' font-size='30' font-weight='900' fill='%23e6c068' text-anchor='middle'%3EDK%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════ PRELOADER ══════════════ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-kicker">HEAD COACH · CROATIA</span>
+    <div class="loader-name"><span>DAMIR</span><span>KRZNAR</span></div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+</div>
+
+<!-- ══════════════ CURSOR ══════════════ -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ══════════════ NAV ══════════════ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-brand" data-scroll>DK<span>.</span></a>
+  <nav class="nav-links">
+    <a href="#profile" data-scroll>Profile</a>
+    <a href="#career" data-scroll>Career</a>
+    <a href="#stats" data-scroll>Record</a>
+    <a href="#honours" data-scroll>Silverware</a>
+    <a href="#method" data-scroll>Method</a>
+  </nav>
+  <div class="nav-right">
+    <a href="#contact" class="nav-cta" data-scroll>Get in touch</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ══════════════ MOBILE NAV (≤900px) ══════════════ -->
+<div class="mnav" id="mnav" aria-hidden="true">
+  <nav class="mnav-links">
+    <a href="#profile" data-scroll><i>01</i><span>Profile</span></a>
+    <a href="#career" data-scroll><i>02</i><span>Career</span></a>
+    <a href="#stats" data-scroll><i>03</i><span>Record</span></a>
+    <a href="#honours" data-scroll><i>04</i><span>Silverware</span></a>
+    <a href="#method" data-scroll><i>05</i><span>Method</span></a>
+    <a href="#contact" data-scroll><i>06</i><span>Get in touch</span></a>
+  </nav>
+  <span class="mnav-script" aria-hidden="true">the tactician</span>
+</div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<main id="top">
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-atmo" aria-hidden="true">
+      <div class="beam beam-a"></div>
+      <div class="beam beam-b"></div>
+      <div class="beam beam-c"></div>
+      <div class="hero-check"></div>
+      <div class="hero-halftone"></div>
+      <div class="hero-floor"></div>
+    </div>
+
+    <div class="hero-stage">
+      <!-- back profile, behind the name -->
+      <div class="hero-layer hl-1" data-depth="-18">
+        <img src="heroimg/hero1.webp" alt="" class="float-a" draggable="false" />
+      </div>
+
+      <div class="hero-title" data-depth="-8" aria-hidden="false">
+        <span class="hero-kicker">Zagreb · Maribor · Celje · Budapest · Khor Fakkan</span>
+        <h1><span class="ht-line">DAMIR</span><span class="ht-line ht-outline">KRZNAR</span></h1>
+      </div>
+
+      <span class="hero-script" data-depth="44" aria-hidden="true">the tactician</span>
+
+      <!-- phone-only tagline that fills the band above the name -->
+      <div class="hero-mobiletag" aria-hidden="true">
+        <span class="hmt-row"><em>✦</em>Croatian Football Manager<em>✦</em></span>
+        <span class="hmt-sub">152 M · 57.2% Wins · 3 Trophies</span>
+      </div>
+
+      <!-- shouting, left -->
+      <div class="hero-layer hl-3" data-depth="26">
+        <img src="heroimg/hero3.webp" alt="" class="float-b" draggable="false" />
+      </div>
+      <!-- pointing, right -->
+      <div class="hero-layer hl-2" data-depth="34">
+        <img src="heroimg/hero2.webp" alt="" class="float-c" draggable="false" />
+      </div>
+      <!-- main figure, front centre -->
+      <div class="hero-layer hl-4" data-depth="16">
+        <img src="heroimg/hero4.webp" alt="Damir Krznar" class="float-d" draggable="false" />
+      </div>
+
+      <div class="hero-vignette" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-foot">
+      <p class="hero-desc">
+        Croatian football manager. Champion as a player, champion as a coach:
+        a domestic double with <b>Dinamo Zagreb</b>, the Slovenian title with <b>NK Celje</b>,
+        and the only manager ever to knock José Mourinho out of the Europa League.
+      </p>
+      <div class="hero-meta">
+        <div><span>Born</span>10.07.1972 · Zabok, HR</div>
+        <div><span>Role</span>Head Coach</div>
+        <div><span>Record</span>152 M · 57.2% wins</div>
+      </div>
+    </div>
+
+    <div class="hero-scrollcue" aria-hidden="true"><i></i>SCROLL</div>
+  </section>
+
+  <!-- ══════════════ MARQUEE ══════════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-set">
+        <span>Croatian Champion 20/21</span><em>✦</em>
+        <span>Croatian Cup Winner 20/21</span><em>✦</em>
+        <span>Slovenian Champion 23/24</span><em>✦</em>
+        <span>Europa League Quarter-Finalist</span><em>✦</em>
+        <span>6× Champion as a Player</span><em>✦</em>
+      </div>
+      <div class="marquee-set">
+        <span>Croatian Champion 20/21</span><em>✦</em>
+        <span>Croatian Cup Winner 20/21</span><em>✦</em>
+        <span>Slovenian Champion 23/24</span><em>✦</em>
+        <span>Europa League Quarter-Finalist</span><em>✦</em>
+        <span>6× Champion as a Player</span><em>✦</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ PROFILE ══════════════ -->
+  <section class="profile section" id="profile">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker">01 – Profile</span>
+        <h2 class="sec-title">From Zabok<br /><em>to the touchline.</em></h2>
+      </div>
+
+      <div class="profile-grid">
+        <div class="profile-copy">
+          <p class="lead" data-reveal>
+            Eleven trophies in Dinamo blue as a player. A double as its coach.
+            A career built on turning chaos into titles.
+          </p>
+          <p data-reveal>
+            Born 10 July 1972 in Zabok, Croatia, Damir Krznar made his name in midfield for
+            Varteks, Dinamo Zagreb and Inter Zaprešić, collecting six Croatian league titles
+            and five Croatian Cups along the way, and winning a cap for Croatia in April 1998.
+          </p>
+          <p data-reveal>
+            Then the coach outgrew the player. A decade as one of football's most trusted
+            assistants, from Zagreb to Riyadh to Al Ain, ended the night Maksimir needed him most.
+            What followed: a domestic double with Dinamo Zagreb in his first months in charge,
+            a rescue act at Maribor, a championship with Celje, the bench of Hungary's most
+            decorated club, and a return to the Gulf with Khor Fakkan in 2026.
+          </p>
+        </div>
+
+        <aside class="profile-facts" data-reveal>
+          <div class="fact"><span>Born</span><b>10 July 1972 · Zabok, Croatia</b></div>
+          <div class="fact"><span>Playing position</span><b>Midfielder → Manager</b></div>
+          <div class="fact"><span>International</span><b>Croatia · 1 cap (1998)</b></div>
+          <div class="fact"><span>Major trophies</span><b>14 · 11 as player, 3 as manager</b></div>
+          <div class="fact"><span>Leagues coached in</span><b>Croatia · Slovenia · Hungary · UAE</b></div>
+        </aside>
+      </div>
+    </div>
+    <img src="heroimg/hero1.webp" alt="" class="profile-ghost" aria-hidden="true" />
+  </section>
+
+  <!-- ══════════════ CAREER TIMELINE (PINNED) ══════════════ -->
+  <section class="career" id="career">
+    <div class="career-pin" id="careerPin">
+      <div class="pitch" aria-hidden="true">
+        <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="60" y="40" width="1080" height="720" />
+            <line x1="600" y1="40" x2="600" y2="760" />
+            <circle cx="600" cy="400" r="110" />
+            <circle cx="600" cy="400" r="4" fill="currentColor" />
+            <rect x="60" y="200" width="180" height="400" />
+            <rect x="60" y="310" width="66" height="180" />
+            <path d="M 240 322 A 110 110 0 0 1 240 478" />
+            <rect x="960" y="200" width="180" height="400" />
+            <rect x="1074" y="310" width="66" height="180" />
+            <path d="M 960 478 A 110 110 0 0 1 960 322" />
+            <circle cx="182" cy="400" r="4" fill="currentColor" />
+            <circle cx="1018" cy="400" r="4" fill="currentColor" />
+            <path d="M 60 60 A 20 20 0 0 0 80 40" />
+            <path d="M 1120 40 A 20 20 0 0 0 1140 60" />
+            <path d="M 1140 740 A 20 20 0 0 0 1120 760" />
+            <path d="M 80 760 A 20 20 0 0 0 60 740" />
+          </g>
+        </svg>
+        <div class="pitch-shade"></div>
+      </div>
+
+      <div class="career-head">
+        <span class="kicker">02 – The Journey</span>
+        <h2 class="sec-title-sm">Every dugout, <em>every year.</em></h2>
+      </div>
+
+      <!-- ≤900px carousel chrome: progress line with the active club's crest riding on it -->
+      <div class="car-chrome" aria-hidden="true">
+        <div class="car-line"><i id="carFill"></i></div>
+        <span class="car-crest" id="carCrest"><img src="Clubsimg/Dinamozagreb.webp" alt="" /></span>
+      </div>
+
+      <div class="career-grid">
+        <!-- LEFT RAIL : built by JS from slides -->
+        <div class="career-rail" aria-hidden="true">
+          <div class="rail-line"><i id="railFill"></i></div>
+          <div class="rail-track" id="railTrack"></div>
+        </div>
+
+        <!-- CENTER + RIGHT : slides -->
+        <div class="career-slides" id="careerSlides">
+
+          <article class="career-slide" data-year="2010" data-span="2010 – 2021" data-club="The Assistant Years" data-logo="Clubsimg/Dinamozagreb.webp" data-color="#8fa3c8">
+            <div class="cs-text">
+              <span class="cs-years">2010 – 2021</span>
+              <h3 class="cs-club">The Assistant Years</h3>
+              <span class="cs-role">Inter Zaprešić · Dinamo Zagreb · Al Nassr · Al Ain · Al Hilal</span>
+              <p>
+                A decade in the engine room. Assistant to Lončarević at Inter Zaprešić, then to
+                Jurčić, Čačić, Ivanković and Mamić at Dinamo Zagreb, with spells at Al Nassr,
+                Al Ain and Al Hilal. Twice trusted as Dinamo's interim boss, and in 2013 he
+                won all three of his matches in caretaker charge.
+              </p>
+              <ul class="cs-feats">
+                <li>Interim manager of Dinamo Zagreb in 2013 &amp; 2015</li>
+                <li>Perfect 3/3 record in the 2013 caretaker spell</li>
+                <li>Title-winning staffs in Croatia and the Gulf</li>
+              </ul>
+            </div>
+            <figure class="cs-photo">
+              <img src="heroimg/hero1.webp" alt="Damir Krznar, assistant coach era" />
+              <figcaption>№ 01 – The apprenticeship</figcaption>
+            </figure>
+          </article>
+
+          <article class="career-slide" data-year="2021" data-span="MAR – DEC 2021" data-club="GNK Dinamo Zagreb" data-logo="Clubsimg/Dinamozagreb.webp" data-color="#2b59ff">
+            <div class="cs-text">
+              <span class="cs-years">March – December 2021</span>
+              <h3 class="cs-club">GNK Dinamo Zagreb</h3>
+              <span class="cs-role">Head Coach · Prva HNL</span>
+              <p>
+                Thrown in three days before facing Mourinho's Tottenham, 0–2 down from the first
+                leg. Maksimir answered with a 3–0 miracle: Dinamo's first Europa League
+                quarter-final in club history. By May he had delivered the league title and the
+                Croatian Cup: the double, in his first months in charge.
+              </p>
+              <ul class="cs-feats">
+                <li>Croatian First League champion 2020–21</li>
+                <li>Croatian Cup winner 2020–21, the double</li>
+                <li>48 matches · 29 wins · 60.4% win rate</li>
+              </ul>
+            </div>
+            <figure class="cs-photo">
+              <img src="Historyimg/DinamoZagrebmainteam.webp" alt="Damir Krznar celebrating as Dinamo Zagreb head coach" />
+              <figcaption>№ 02 – The double</figcaption>
+            </figure>
+          </article>
+
+          <article class="career-slide" data-year="2022" data-span="JAN – AUG 2022" data-club="Dinamo Zagreb II" data-logo="Clubsimg/Dinamozagreb.webp" data-color="#4f7cff">
+            <div class="cs-text">
+              <span class="cs-years">January – August 2022</span>
+              <h3 class="cs-club">Dinamo Zagreb II</h3>
+              <span class="cs-role">Head Coach · Second team</span>
+              <p>
+                Back at the club's academy side, sharpening the next generation of Dinamo
+                first-teamers in the Croatian second tier, the same production line he had
+                helped polish for a decade from the first-team bench.
+              </p>
+              <ul class="cs-feats">
+                <li>15 matches in charge of the second team</li>
+                <li>Development bridge from academy to Prva HNL</li>
+              </ul>
+            </div>
+            <figure class="cs-photo">
+              <img src="Historyimg/Dinamo2ndteam.webp" alt="Damir Krznar, Dinamo Zagreb II" />
+              <figcaption>№ 03 – The production line</figcaption>
+            </figure>
+          </article>
+
+          <article class="career-slide" data-year="2022" data-span="2022 – 2023" data-club="NK Maribor" data-logo="Clubsimg/NKMaribor.webp" data-color="#a06bd8">
+            <div class="cs-text">
+              <span class="cs-years">August 2022 – October 2023</span>
+              <h3 class="cs-club">NK Maribor</h3>
+              <span class="cs-role">Head Coach · Slovenian PrvaLiga</span>
+              <p>
+                He inherited the reigning Slovenian champions dead last, three points from five
+                games, and dragged them to third place and a cup final, earning a contract
+                extension to 2026. The turnaround that defined his reputation as a fixer.
+              </p>
+              <ul class="cs-feats">
+                <li>Last place → 3rd in the PrvaLiga</li>
+                <li>2022–23 Slovenian Cup finalist</li>
+                <li>55 matches · 28 wins · 13 draws · 14 defeats</li>
+              </ul>
+            </div>
+            <figure class="cs-photo">
+              <img src="Historyimg/Maribor.webp" alt="Damir Krznar, NK Maribor" />
+              <figcaption>№ 04 – The rescue</figcaption>
+            </figure>
+          </article>
+
+          <article class="career-slide" data-year="2023" data-span="2023 – 2024" data-club="NK Celje" data-logo="Clubsimg/NKCelje.webp" data-color="#f2c531">
+            <div class="cs-text">
+              <span class="cs-years">October 2023 – July 2024</span>
+              <h3 class="cs-club">NK Celje</h3>
+              <span class="cs-role">Head Coach · Slovenian PrvaLiga</span>
+              <p>
+                Appointed mid-season, he delivered Celje the 2023–24 Slovenian PrvaLiga title,
+                the club's second-ever championship, at the best win rate of his
+                career. Champion of Slovenia, one year after arriving in the league.
+              </p>
+              <ul class="cs-feats">
+                <li>Slovenian PrvaLiga champion 2023–24</li>
+                <li>31 matches · 20 wins · only 4 defeats</li>
+                <li>64.5% win rate, a career best</li>
+              </ul>
+            </div>
+            <figure class="cs-photo">
+              <img src="Historyimg/Celje.webp" alt="Damir Krznar, NK Celje" />
+              <figcaption>№ 05 – The champion</figcaption>
+            </figure>
+          </article>
+
+          <article class="career-slide" data-year="2025" data-span="MAY – NOV 2025" data-club="Újpest FC" data-logo="Clubsimg/ujpestfc.webp" data-color="#8f7bd8">
+            <div class="cs-text">
+              <span class="cs-years">May – November 2025</span>
+              <h3 class="cs-club">Újpest FC</h3>
+              <span class="cs-role">Head Coach · Nemzeti Bajnokság I</span>
+              <p>
+                A new chapter in Budapest with Hungary's most decorated club. Krznar took the
+                Újpest bench in May 2025 and led the lilacs through sixteen league matches in
+                the Nemzeti Bajnokság I.
+              </p>
+              <ul class="cs-feats">
+                <li>Head coach of Hungary's record cup winners</li>
+                <li>16 NB I matches in charge</li>
+              </ul>
+            </div>
+            <figure class="cs-photo">
+              <img src="Historyimg/ujpest.webp" alt="Damir Krznar, Újpest FC" />
+              <figcaption>№ 06 – The lilac chapter</figcaption>
+            </figure>
+          </article>
+
+          <article class="career-slide" data-year="2026" data-span="JAN – JUN 2026" data-club="Khor Fakkan" data-logo="Clubsimg/khorfakhanfc.webp" data-color="#2fae5c">
+            <div class="cs-text">
+              <span class="cs-years">January – June 2026</span>
+              <h3 class="cs-club">Khor Fakkan Club</h3>
+              <span class="cs-role">Head Coach · UAE Pro League</span>
+              <p>
+                Back to the Gulf, this time in the first chair. Appointed on 20 January 2026,
+                Krznar took charge of Khor Fakkan in the UAE Pro League and steered the Eagles
+                through to the end of the 2025–26 season, returning to the region he once
+                worked in with Al Nassr, Al Ain and Al Hilal.
+              </p>
+              <ul class="cs-feats">
+                <li>Head coach in the UAE Pro League</li>
+                <li>Second Gulf chapter, first as the man in charge</li>
+              </ul>
+            </div>
+            <figure class="cs-photo">
+              <img src="Historyimg/khorfakkan.png" alt="Damir Krznar, Khor Fakkan Club" />
+              <figcaption>№ 07 – The eagles</figcaption>
+            </figure>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="car-dots" id="carDots" aria-hidden="true"></div>
+
+      <div class="career-hint" aria-hidden="true">Keep scrolling: the timeline moves, not the page</div>
+    </div>
+  </section>
+
+  <!-- ══════════════ MAKSIMIR INTERSTITIAL ══════════════ -->
+  <section class="maksimir" id="maksimir">
+    <div class="mk-badges" aria-hidden="true">
+      <img class="mk-badge mk-badge-l" src="Clubsimg/Dinamozagreb.webp" alt="" />
+      <!-- tries a local file first, falls back to the hosted crest -->
+      <img class="mk-badge mk-badge-r" src="Clubsimg/tottenham.webp" alt=""
+           onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg'}else{this.style.display='none'}" />
+    </div>
+    <div class="mk-inner">
+      <span class="kicker" data-reveal>18 March 2021 · Stadion Maksimir · UEFA Europa League R16</span>
+      <div class="mk-score" id="mkScore" aria-label="Dinamo Zagreb 3, Tottenham 0">3–0</div>
+      <div class="mk-teams" data-reveal><b>Dinamo Zagreb</b><span>vs</span><b>Tottenham Hotspur</b></div>
+      <p class="mk-copy" data-reveal>
+        Three days after taking charge, Krznar overturned a 0–2 first-leg deficit against
+        José Mourinho's Spurs. Dinamo's first Europa League quarter-final in club history,
+        and the only time Mourinho has ever been eliminated from the competition.
+      </p>
+    </div>
+    <div class="mk-marquee" aria-hidden="true">
+      <div class="mk-marquee-track">
+        <div class="mk-set">
+          <span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span><span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span>
+          <span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span><span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span>
+          <span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span><span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span>
+        </div>
+        <div class="mk-set">
+          <span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span><span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span>
+          <span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span><span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span>
+          <span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span><span>THE MIRACLE OF MAKSIMIR ·&nbsp;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ STATS ══════════════ -->
+  <section class="stats section" id="stats">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker">03 – The Record</span>
+        <h2 class="sec-title">Numbers don't<br /><em>negotiate.</em></h2>
+      </div>
+
+      <div class="stat-tiles">
+        <div class="stat-tile" data-reveal="pop"><b class="count" data-count="152">0</b><span>Matches</span></div>
+        <div class="stat-tile" data-reveal="pop"><b class="count" data-count="87">0</b><span>Wins</span></div>
+        <div class="stat-tile" data-reveal="pop"><b class="count" data-count="33">0</b><span>Draws</span></div>
+        <div class="stat-tile" data-reveal="pop"><b class="count" data-count="32">0</b><span>Losses</span></div>
+        <div class="stat-tile is-accent" data-reveal="pop"><b><span class="count" data-count="57.2" data-decimals="1">0</span>%</b><span>Win rate</span></div>
+        <div class="stat-tile is-gold" data-reveal="pop"><b class="count" data-count="3">0</b><span>Trophies as manager</span></div>
+      </div>
+
+      <div class="stat-table">
+        <div class="stat-row stat-row-head" data-reveal="left">
+          <span>Club</span><span>Tenure</span><span>P</span><span>W</span><span>D</span><span>L</span><span class="sr-bar">Win %</span>
+        </div>
+        <div class="stat-row" data-win="100" data-reveal="left">
+          <span>Dinamo Zagreb <i>(interim)</i></span><span>Aug – Sep 2013</span><span>3</span><span>3</span><span>0</span><span>0</span>
+          <span class="sr-bar"><i></i><b>100%</b></span>
+        </div>
+        <div class="stat-row" data-win="60.4" data-reveal="left">
+          <span>Dinamo Zagreb</span><span>Mar – Dec 2021</span><span>48</span><span>29</span><span>11</span><span>8</span>
+          <span class="sr-bar"><i></i><b>60.4%</b></span>
+        </div>
+        <div class="stat-row" data-win="46.7" data-reveal="left">
+          <span>Dinamo Zagreb II</span><span>Jan – Aug 2022</span><span>15</span><span>7</span><span>2</span><span>6</span>
+          <span class="sr-bar"><i></i><b>46.7%</b></span>
+        </div>
+        <div class="stat-row" data-win="50.9" data-reveal="left">
+          <span>NK Maribor</span><span>Aug 2022 – Oct 2023</span><span>55</span><span>28</span><span>13</span><span>14</span>
+          <span class="sr-bar"><i></i><b>50.9%</b></span>
+        </div>
+        <div class="stat-row" data-win="64.5" data-reveal="left">
+          <span>NK Celje</span><span>Oct 2023 – Jul 2024</span><span>31</span><span>20</span><span>7</span><span>4</span>
+          <span class="sr-bar"><i></i><b>64.5%</b></span>
+        </div>
+        <div class="stat-row stat-row-total" data-win="57.2" data-reveal="left">
+          <span>Total</span><span></span><span>152</span><span>87</span><span>33</span><span>32</span>
+          <span class="sr-bar"><i></i><b>57.2%</b></span>
+        </div>
+      </div>
+      <p class="stat-note" data-reveal>
+        Official managerial record per Wikipedia, updated 28 July 2024.
+        The Újpest (2025) and Khor Fakkan (2026) tenures are covered in the timeline above.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════ HONOURS ══════════════ -->
+  <section class="honours section" id="honours">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker">04 – Silverware</span>
+        <h2 class="sec-title">What the cabinet<br /><em>says.</em></h2>
+      </div>
+
+      <div class="honour-cols">
+        <div class="honour-col">
+          <h3 class="honour-role">As Manager</h3>
+          <div class="honour-card" data-reveal>
+            <svg class="trophy" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v2h3v3c0 2.8-2 5-4.6 5.4A6 6 0 0 1 13 16.9V19h3v2H8v-2h3v-2.1a6 6 0 0 1-3.4-3.5C5 13 3 10.8 3 8V5h3V3zm0 4H5v1c0 1.4.8 2.6 2 3.2A9 9 0 0 1 6 8V7zm12 0v1c0 1.1-.3 2.2-1 3.2 1.2-.6 2-1.8 2-3.2V7h-1z" fill="currentColor"/></svg>
+            <div><b>Croatian First League</b><span>Dinamo Zagreb · 2020–21</span></div>
+          </div>
+          <div class="honour-card" data-reveal>
+            <svg class="trophy" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v2h3v3c0 2.8-2 5-4.6 5.4A6 6 0 0 1 13 16.9V19h3v2H8v-2h3v-2.1a6 6 0 0 1-3.4-3.5C5 13 3 10.8 3 8V5h3V3zm0 4H5v1c0 1.4.8 2.6 2 3.2A9 9 0 0 1 6 8V7zm12 0v1c0 1.1-.3 2.2-1 3.2 1.2-.6 2-1.8 2-3.2V7h-1z" fill="currentColor"/></svg>
+            <div><b>Croatian Cup</b><span>Dinamo Zagreb · 2020–21</span></div>
+          </div>
+          <div class="honour-card" data-reveal>
+            <svg class="trophy" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v2h3v3c0 2.8-2 5-4.6 5.4A6 6 0 0 1 13 16.9V19h3v2H8v-2h3v-2.1a6 6 0 0 1-3.4-3.5C5 13 3 10.8 3 8V5h3V3zm0 4H5v1c0 1.4.8 2.6 2 3.2A9 9 0 0 1 6 8V7zm12 0v1c0 1.1-.3 2.2-1 3.2 1.2-.6 2-1.8 2-3.2V7h-1z" fill="currentColor"/></svg>
+            <div><b>Slovenian PrvaLiga</b><span>NK Celje · 2023–24</span></div>
+          </div>
+        </div>
+
+        <div class="honour-col">
+          <h3 class="honour-role">As Player <small>· Dinamo Zagreb</small></h3>
+          <div class="honour-card" data-reveal>
+            <span class="honour-x">6</span>
+            <div><b>Croatian First League</b><span>1995–96 · 96–97 · 97–98 · 98–99 · 99–00 · 2002–03</span></div>
+          </div>
+          <div class="honour-card" data-reveal>
+            <span class="honour-x">5</span>
+            <div><b>Croatian Cup</b><span>1995–96 · 96–97 · 97–98 · 2000–01 · 2001–02</span></div>
+          </div>
+          <div class="honour-card" data-reveal>
+            <span class="honour-x">1</span>
+            <div><b>Croatia National Team</b><span>Cap vs Poland · 22 April 1998</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ METHOD ══════════════ -->
+  <section class="method section" id="method">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker">05 – The Method</span>
+        <h2 class="sec-title">What he's<br /><em>built on.</em></h2>
+      </div>
+
+      <div class="skills">
+        <div class="skill" data-reveal data-level="94">
+          <div class="skill-top"><b>Turnarounds &amp; crisis management</b><span class="skill-val">94</span></div>
+          <div class="skill-bar"><i></i></div>
+          <p>Maribor: from last place to third and a cup final.</p>
+        </div>
+        <div class="skill" data-reveal data-level="92">
+          <div class="skill-top"><b>Big-night preparation</b><span class="skill-val">92</span></div>
+          <div class="skill-bar"><i></i></div>
+          <p>Mourinho, overturned with three days on the job.</p>
+        </div>
+        <div class="skill" data-reveal data-level="90">
+          <div class="skill-top"><b>Title-run management</b><span class="skill-val">90</span></div>
+          <div class="skill-bar"><i></i></div>
+          <p>Two league titles as head coach in four seasons.</p>
+        </div>
+        <div class="skill" data-reveal data-level="88">
+          <div class="skill-top"><b>Youth development</b><span class="skill-val">88</span></div>
+          <div class="skill-bar"><i></i></div>
+          <p>A decade around the Dinamo academy production line.</p>
+        </div>
+        <div class="skill" data-reveal data-level="86">
+          <div class="skill-top"><b>Adaptability across leagues</b><span class="skill-val">86</span></div>
+          <div class="skill-bar"><i></i></div>
+          <p>Croatia · Saudi Arabia · UAE · Slovenia · Hungary.</p>
+        </div>
+      </div>
+
+      <div class="principles">
+        <div class="principle" data-reveal>
+          <span>I.</span><b>Front foot, always</b>
+          <p>Teams that press, run and take the game to the opponent, home or away, favourite or underdog.</p>
+        </div>
+        <div class="principle" data-reveal>
+          <span>II.</span><b>The group above the star</b>
+          <p>Dressing rooms built on standards. Egos serve the team, never the reverse.</p>
+        </div>
+        <div class="principle" data-reveal>
+          <span>III.</span><b>Detail decides</b>
+          <p>Set pieces, restarts, the last five minutes: trophies live in the small print.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer" id="contact">
+    <!-- rapid newspaper jump-cut backdrop (frames generated with Higgsfield) -->
+    <div class="footer-press" id="footerPress" aria-hidden="true"></div>
+    <div class="footer-check" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="kicker" data-reveal>06 – Full Time</span>
+      <h2 class="footer-big" data-reveal>FULL<br />TIME<span class="footer-dot">.</span></h2>
+      <p class="footer-sub" data-reveal>The story continues. For clubs, federations and media enquiries:</p>
+      <!-- Replace the mailto below with the real contact address -->
+      <a class="footer-cta" href="mailto:" data-reveal>Get in touch</a>
+
+      <div class="footer-base">
+        <span>© 2026 Damir Krznar</span>
+        <span>Statistics: Wikipedia managerial record, upd. 28 Jul 2024</span>
+        <a href="#top" data-scroll>Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- animation libraries are bundled locally so they load on any network -->
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
