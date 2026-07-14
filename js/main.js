@@ -365,13 +365,13 @@ if (hasGsap && !prefersReduced) {
     }
   );
 
-  /* the two giant crests drift in opposite directions as you scroll past */
-  gsap.fromTo(".mk-badge-l", { y: 120, rotation: -14 }, {
-    y: -120, rotation: -6, ease: "none",
+  /* the two managers drift in opposite directions as you scroll past */
+  gsap.fromTo(".mk-face-l", { y: 110, rotation: -3 }, {
+    y: -110, rotation: 1.5, ease: "none",
     scrollTrigger: { trigger: ".maksimir", start: "top bottom", end: "bottom top", scrub: true },
   });
-  gsap.fromTo(".mk-badge-r", { y: -80, rotation: 12 }, {
-    y: 140, rotation: 4, ease: "none",
+  gsap.fromTo(".mk-face-r", { y: -80, rotation: 3 }, {
+    y: 120, rotation: -1.5, ease: "none",
     scrollTrigger: { trigger: ".maksimir", start: "top bottom", end: "bottom top", scrub: true },
   });
 }

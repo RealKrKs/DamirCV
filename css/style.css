@@ -797,18 +797,37 @@ html.cursor-on .cursor, html.cursor-on .cursor-ring { opacity: 1; }
     radial-gradient(70% 60% at 50% 40%, rgba(43, 89, 255, 0.16), transparent 70%),
     var(--bg);
 }
-/* giant ghost crests bleeding off both edges */
+/* the two managers stare each other down across the scoreline; the club
+   crests live in the scoreboard lockup (.mk-teams) instead of the background */
 .mk-badges { position: absolute; inset: 0; pointer-events: none; }
-.mk-badge {
+.mk-face {
   position: absolute;
-  width: clamp(340px, 42vw, 700px);
-  opacity: 0.06;
-  filter: grayscale(0.35) brightness(1.5);
+  width: clamp(300px, 35vw, 660px);
+  opacity: 0.13;
+  filter: grayscale(0.55) contrast(1.05) brightness(0.9);
   will-change: transform;
-  /* transforms (drift + rotation) are scroll-driven from main.js */
+  /* transforms are scroll-driven from main.js */
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 96%);
+          mask-image: linear-gradient(180deg, #000 55%, transparent 96%);
 }
-.mk-badge-l { left: -9%; top: 4%; }
-.mk-badge-r { right: -6%; top: 20%; }
+.mk-face-l { left: clamp(-60px, -1.5vw, 0px); top: 22%; }
+/* Mourinho's photo is cropped with his face at its LEFT edge (Krznar's nose
+   sits at ~76% of his), so his offset is much larger to keep both noses the
+   same distance from the section's centre */
+.mk-face-r { right: clamp(-160px, -10vw, -85px); top: 17%; }
+
+/* tablets & phones: the faces grow and slide off-screen so only the profiles
+   peek in, framing the score from both sides */
+@media (max-width: 900px) {
+  .mk-face { width: 105vw; opacity: 0.12; }
+  .mk-face-l { left: -58vw; top: 17%; }
+  .mk-face-r { right: -82vw; top: 15%; }
+}
+
+/* phones: crests off so the club names keep fitting on a single row */
+@media (max-width: 470px) {
+  .mk-team-crest { display: none; }
+}
 
 .mk-inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
 .mk-score {
@@ -822,10 +841,16 @@ html.cursor-on .cursor, html.cursor-on .cursor-ring { opacity: 1; }
   will-change: transform;
 }
 .mk-teams {
-  display: flex; align-items: baseline; justify-content: center; gap: 18px;
+  display: flex; align-items: center; justify-content: center; gap: clamp(10px, 1.6vw, 18px);
   font-family: var(--font-display);
   font-size: clamp(16px, 2.4vw, 30px);
   text-transform: uppercase; letter-spacing: 0.06em;
+}
+/* broadcast-scoreboard lockup: each club's crest flanks its name.
+   Sized by height — the Spurs cockerel is tall and narrow, Dinamo square */
+.mk-team-crest {
+  height: clamp(32px, 3.6vw, 50px); width: auto; flex: 0 0 auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.55));
 }
 .mk-teams span { font-family: var(--font-serif); font-style: italic; color: var(--gold); font-size: 0.7em; text-transform: none; }
 .mk-copy { color: var(--muted); max-width: 62ch; margin: 26px auto 0; }

@@ -453,15 +453,20 @@
   <!-- ══════════════ MAKSIMIR INTERSTITIAL ══════════════ -->
   <section class="maksimir" id="maksimir">
     <div class="mk-badges" aria-hidden="true">
-      <img class="mk-badge mk-badge-l" src="Clubsimg/Dinamozagreb.webp" alt="" loading="lazy" decoding="async" />
-      <!-- tries a local file first, falls back to the hosted crest -->
-      <img class="mk-badge mk-badge-r" src="Clubsimg/tottenham.webp" alt=""
-           onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg'}else{this.style.display='none'}" />
+      <!-- the two managers stare each other down across the scoreline -->
+      <img class="mk-face mk-face-l" src="dinamovsspursimg/krznar.webp" alt="" loading="lazy" decoding="async" />
+      <img class="mk-face mk-face-r" src="dinamovsspursimg/mourinho.webp" alt="" loading="lazy" decoding="async" />
     </div>
     <div class="mk-inner">
       <span class="kicker" data-reveal>18 March 2021 · Stadion Maksimir · UEFA Europa League R16</span>
       <div class="mk-score" id="mkScore" aria-label="Dinamo Zagreb 3, Tottenham 0">3–0</div>
-      <div class="mk-teams" data-reveal><b>Dinamo Zagreb</b><span>vs</span><b>Tottenham Hotspur</b></div>
+      <div class="mk-teams" data-reveal>
+        <img class="mk-team-crest" src="Clubsimg/Dinamozagreb.webp" alt="Dinamo Zagreb crest" loading="lazy" decoding="async" />
+        <b>Dinamo Zagreb</b><span>vs</span><b>Tottenham Hotspur</b>
+        <!-- tries a local file first, falls back to the hosted crest -->
+        <img class="mk-team-crest" src="Clubsimg/tottenham.webp" alt="Tottenham Hotspur crest" loading="lazy" decoding="async"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg'}else{this.style.display='none'}" />
+      </div>
       <p class="mk-copy" data-reveal>
         Three days after taking charge, Krznar overturned a 0–2 first-leg deficit against
         José Mourinho's Spurs. Dinamo's first Europa League quarter-final in club history,
