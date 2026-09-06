@@ -1085,24 +1085,149 @@ html.cursor-on .cursor, html.cursor-on .cursor-ring { opacity: 1; }
   -webkit-mask-image: radial-gradient(circle at 0% 100%, #000 10%, transparent 70%);
           mask-image: radial-gradient(circle at 0% 100%, #000 10%, transparent 70%);
 }
-.footer-big {
+/* ── contact: editorial split — statement left, two teamsheet cards right ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(38px, 6vw, 84px);
+  align-items: start;
+  text-align: left; /* the footer itself is centred; this block is not */
+}
+.contact-title {
   font-family: var(--font-display);
-  font-size: clamp(80px, 16vw, 230px);
-  line-height: 0.88;
+  font-size: clamp(46px, 6.4vw, 104px);
+  line-height: 0.9;
   text-transform: uppercase;
-  margin: 8px 0 26px;
+  letter-spacing: 0.01em;
 }
-.footer-dot { color: var(--gold); }
-.footer-sub { color: var(--muted); max-width: 46ch; margin: 0 auto 34px; }
-.footer-cta {
-  display: inline-block;
-  font-family: var(--font-mono); font-size: 12px;
-  letter-spacing: 0.3em; text-transform: uppercase;
-  border: 1px solid var(--gold); color: var(--gold);
-  padding: 18px 44px;
-  transition: background 0.35s ease, color 0.35s ease, letter-spacing 0.35s ease;
+.contact-title em {
+  font-family: var(--font-serif); font-style: italic; font-weight: 400;
+  text-transform: none; letter-spacing: 0;
+  color: var(--gold);
 }
-.footer-cta:hover { background: var(--gold); color: var(--bg); letter-spacing: 0.4em; }
+.contact-sub {
+  color: var(--muted);
+  max-width: 38ch;
+  margin-top: clamp(20px, 2.4vw, 30px);
+  padding-left: 18px;
+  border-left: 2px solid var(--gold);
+  font-size: 15px;
+  text-wrap: pretty;
+}
+
+.contact-cards { display: flex; flex-direction: column; gap: 16px; }
+.ccard {
+  position: relative; overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(8, 12, 20, 0.82);
+  padding: clamp(22px, 2.5vw, 34px);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.4s ease, background 0.4s ease;
+}
+/* accent rule across the top — always lit on the primary card, drawn in on hover */
+.ccard::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--gold));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ccard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(230, 192, 104, 0.42);
+  background: rgba(12, 18, 30, 0.9);
+}
+.ccard:hover::before { transform: scaleX(1); }
+.ccard.is-primary {
+  border-color: rgba(230, 192, 104, 0.34);
+  background:
+    radial-gradient(120% 100% at 0% 0%, rgba(230, 192, 104, 0.07), transparent 58%),
+    rgba(8, 12, 20, 0.86);
+}
+.ccard.is-primary::before { transform: scaleX(1); background: var(--gold); }
+/* folded-corner mark, top right — a teamsheet detail */
+.ccard.is-primary::after {
+  content: ""; position: absolute; top: 0; right: 0;
+  border: 13px solid transparent;
+  border-top-color: rgba(230, 192, 104, 0.45);
+  border-right-color: rgba(230, 192, 104, 0.45);
+}
+
+.ccard-head { display: flex; align-items: center; gap: 16px; }
+/* hex badge echoing the career rail crests */
+.ccard-num {
+  flex: 0 0 44px;
+  width: 44px; height: 52px;
+  display: grid; place-items: center;
+  padding-bottom: 11px;
+  background: rgba(244, 241, 232, 0.07);
+  border: 1px solid rgba(244, 241, 232, 0.24);
+  clip-path: polygon(0 0, 100% 0, 100% 74%, 50% 100%, 0 74%);
+  font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em;
+  color: var(--gold);
+}
+.ccard.is-primary .ccard-num {
+  background: rgba(230, 192, 104, 0.14);
+  border-color: rgba(230, 192, 104, 0.5);
+}
+.ccard-tag {
+  display: block;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--gold);
+}
+.ccard-name {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(19px, 2vw, 26px);
+  line-height: 1.06; text-transform: uppercase; letter-spacing: 0.02em;
+  margin: 6px 0 3px;
+}
+.ccard-role {
+  display: block;
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 15px; color: var(--muted);
+}
+
+.ccard-mail {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  margin-top: clamp(18px, 2vw, 24px);
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: clamp(14px, 1.4vw, 17px);
+  color: var(--ink);
+}
+.ccard-mail span {
+  min-width: 0; word-break: break-word;
+  padding-bottom: 3px;
+  /* underline that wipes in from the left on hover */
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ccard-mail::after {
+  content: "→"; flex: 0 0 auto; color: var(--gold);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ccard-mail:hover span { background-size: 100% 1px; }
+.ccard-mail:hover::after { transform: translateX(6px); }
+
+.ccard-note { margin-top: 14px; font-size: 13px; color: var(--muted); }
+.ccard-rows { margin-top: 6px; }
+.ccard-row {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  padding: 11px 0;
+  border-top: 1px solid var(--line);
+}
+.ccard-row span {
+  flex: 0 0 auto;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold);
+}
+.ccard-row b { font-weight: 500; font-size: 14px; text-align: right; }
+.ccard-row b a { transition: color 0.3s ease; }
+.ccard-row b a:hover { color: var(--gold); }
 .footer-base {
   display: flex; justify-content: space-between; align-items: center;
   gap: 16px; flex-wrap: wrap;
@@ -1167,7 +1292,9 @@ html.cursor-on .cursor, html.cursor-on .cursor-ring { opacity: 1; }
 
   /* ── career: swipe carousel — crest on the progress line, dots below ── */
   .career-pin { min-height: 0; padding-top: 90px; }
-  .career-grid { grid-template-columns: 1fr; }
+  /* minmax(0,…) not 1fr: a bare 1fr floors at the content size, and the
+     7 × min-width:100% carousel slides then widened the whole page sideways */
+  .career-grid { grid-template-columns: minmax(0, 1fr); }
   .career-rail { display: none; }
 
   .car-chrome {
@@ -1248,6 +1375,10 @@ html.cursor-on .cursor, html.cursor-on .cursor-ring { opacity: 1; }
   .honour-cols { grid-template-columns: 1fr; }
   .principles { grid-template-columns: 1fr; }
 
+  /* contact: statement stacks above the cards */
+  .contact-grid { grid-template-columns: 1fr; gap: clamp(32px, 6vw, 48px); }
+  .contact-sub { max-width: 52ch; }
+
   .stat-row { grid-template-columns: 1.6fr 0.4fr 0.4fr 0.4fr 0.4fr; }
   .stat-row > span:nth-child(2), .stat-row .sr-bar { display: none; }
 }
@@ -1267,6 +1398,11 @@ html.cursor-on .cursor, html.cursor-on .cursor-ring { opacity: 1; }
 @media (max-width: 580px) {
   .stat-tiles { grid-template-columns: repeat(2, 1fr); }
   .footer-base { flex-direction: column; }
+
+  /* label above value — "Jadranska Avenija 6/31" needs the full width here */
+  .ccard-row { flex-direction: column; align-items: flex-start; gap: 5px; }
+  .ccard-row b { text-align: left; }
+  .ccard-head { gap: 13px; }
 
   /* poster mode: title near the centre, single figure in front, no info panels */
   .hero-foot { display: none; }
